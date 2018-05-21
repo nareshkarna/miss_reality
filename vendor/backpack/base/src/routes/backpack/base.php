@@ -52,5 +52,8 @@ function () {
 	 // if not otherwise configured, setup the services routes
     if (config('backpack.base.setup_services_routes')) {
         Route::get('services', 'AdminController@services')->name('backpack.services');
+		Route::get('create_service', 'AdminController@add_service')->name('backpack.services');
+		Route::post('save_service', 'AdminController@save_service');
+
     }
 });

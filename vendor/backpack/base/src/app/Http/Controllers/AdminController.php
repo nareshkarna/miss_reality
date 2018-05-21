@@ -42,4 +42,10 @@ class AdminController extends Controller
 
         return view('backpack::services', $this->data);
     }
+	public function add_service()
+    {
+        $this->data['title'] = trans('backpack::base.services'); // set the page title
+
+        return view('backpack::create_service', $this->data);
+    }
 }
