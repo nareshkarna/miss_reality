@@ -3,7 +3,7 @@
 @section('header')
     <section class="content-header">
       <h1>
-         Services
+         Create Service
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{ backpack_url() }}">{{ config('backpack.base.project_name') }}</a></li>
@@ -23,12 +23,12 @@
 				<input type="text" class="form-control" name="title"/>
 			</div>
 			<div class="form-group">
-				<input type="hidden" value="{{csrf_token()}}" name="_token" />
+			
 				<label for="description">Description:</label>
-				<textarea name="description" ></textarea>
+				<textarea name="description" class="form-control" ></textarea>
 			</div>
 			<div class="form-group">
-				<input type="hidden" value="{{csrf_token()}}" name="_token" />
+				
 				<label for="cost">Cost:</label>
 				<input type="text" class="form-control" name="title"/>
 			</div>
