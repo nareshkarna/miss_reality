@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Services;
+
 class ServiceController extends Controller
 {
     /**
@@ -26,6 +28,20 @@ class ServiceController extends Controller
         $this->data['title'] ='Services'; // set the page title
 
         return view('services.create_service', $this->data);
+    } 
+	public function saveService(Request $request)
+    {
+     
+        $service = new Services();
+        $data = $this->validate($request, [
+            'description'=>'required',
+            'title'=> 'required'
+        ]);
+       
+        $id =$service->saveServices($request->all());
+		dd($id);die;
+        return redirect('/admin/services')->with('success', 'Services has been added successfully.');
+   
     } 
     
 }

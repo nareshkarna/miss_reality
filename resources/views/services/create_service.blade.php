@@ -30,9 +30,10 @@
 			<div class="form-group">
 				
 				<label for="cost">Cost:</label>
-				<input type="text" class="form-control" name="title"/>
+				<input type="text" class="form-control" name="cost"/>
 			</div>
 			<input type ="hidden" name="parent" value="0" / >
+			<input type ="hidden" name="user" value="{{ Auth::user()->id }}" / >
 			<button type="submit" class="btn btn-primary">Create</button>
 			</form>
 		</div>

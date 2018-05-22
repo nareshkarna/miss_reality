@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin/services', 'serviceController@services')->name('services');
 Route::get('/admin/create_service', 'serviceController@add_service')->name('services');
+Route::post('/admin/save_service', 'serviceController@saveService');

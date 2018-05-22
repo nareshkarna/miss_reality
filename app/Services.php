@@ -13,8 +13,8 @@ class Services extends Model
 			$this->parent = $data['parent'];
 			$this->added_by = $data['user'];
 			$this->created_on = date('Y-m-d H:i:s');
-			$this->save();
-			return 1;
+			$id = $this->save();
+			return $id;
 	}
 }
 ?>
