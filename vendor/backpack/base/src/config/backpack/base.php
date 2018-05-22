@@ -72,10 +72,6 @@ return [
     // (you then need to manually define the routes in your web.php)
     'setup_my_account_routes' => true,
 
-	// Set this to false if you would like to skip adding the dashboard routes
-    // (you then need to overwrite the login route on your AuthController)
-    'setup_services_routes' => true,
-
     /*
     |--------------------------------------------------------------------------
     | Authentication

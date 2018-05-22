@@ -49,11 +49,6 @@ function () {
         Route::get('change-password', 'Auth\MyAccountController@getChangePasswordForm')->name('backpack.account.password');
         Route::post('change-password', 'Auth\MyAccountController@postChangePasswordForm');
     }
-	 // if not otherwise configured, setup the services routes
-    if (config('backpack.base.setup_services_routes')) {
-        Route::get('services', 'AdminController@services')->name('backpack.services');
-		Route::get('create_service', 'AdminController@add_service')->name('backpack.services');
-		Route::post('save_service', 'AdminController@save_service');
 
-    }
+    
 });
