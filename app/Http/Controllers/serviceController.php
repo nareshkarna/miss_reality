@@ -21,7 +21,9 @@ class ServiceController extends Controller
     {
         $this->data['title'] = 'Services'; // set the page title
 
-        return view('admin.services', $this->data);
+		$services = Services::all();
+
+        return view('admin.services',  $this->data)->with(compact('services'));
     }
 	public function add_service()
     {
@@ -35,7 +37,8 @@ class ServiceController extends Controller
         $service = new Services();
         $data = $this->validate($request, [
             'description'=>'required',
-            'title'=> 'required'
+            'title'=> 'required',
+			'cost'=> 'nullable|numeric'
         ]);
        
         $id =$service->saveServices($request->all());

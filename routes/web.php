@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+// sevices section routes
 Route::get('/admin/services', 'ServiceController@services')->name('services');
 Route::get('/admin/create_service', 'ServiceController@add_service')->name('services');
 Route::post('/admin/save_service', 'ServiceController@saveService');
