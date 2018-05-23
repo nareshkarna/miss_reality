@@ -39,7 +39,6 @@ class ServiceController extends Controller
         ]);
        
         $id =$service->saveServices($request->all());
-		dd($id);die;
         return redirect('/admin/services')->with('success', 'Services has been added successfully.');
    
     } 
