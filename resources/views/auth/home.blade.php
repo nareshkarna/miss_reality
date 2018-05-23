@@ -60,10 +60,6 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-                        <!--for adding user-type(Customer,Agent) and block status-->
-                        <input id="user_type" type="hidden" class="form-control" name="user_type" value="C" required>
-                        <input id="block_status" type="hidden" class="form-control" name="block_status" value="0" required>
-                        <!--/for adding user-type(Customer,Agent) and block status-->
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

@@ -21,13 +21,13 @@ class ServiceController extends Controller
     {
         $this->data['title'] = 'Services'; // set the page title
 
-        return view('services.services', $this->data);
+        return view('admin.services', $this->data);
     }
 	public function add_service()
     {
         $this->data['title'] ='Services'; // set the page title
 
-        return view('services.create_service', $this->data);
+        return view('admin.create_service', $this->data);
     } 
 	public function saveService(Request $request)
     {

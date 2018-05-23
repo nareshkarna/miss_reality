@@ -11,14 +11,27 @@
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/admin/services', 'serviceController@services')->name('services');
-Route::get('/admin/create_service', 'serviceController@add_service')->name('services');
-Route::post('/admin/save_service', 'serviceController@saveService');
+Route::get('/admin/services', 'ServiceController@services')->name('services');
+Route::get('/admin/create_service', 'ServiceController@add_service')->name('services');
+Route::post('/admin/save_service', 'ServiceController@saveService');
+
+
+// *** Front End Site routes //
+
+Route::get('/', 'SiteController@index');
+
+
+// *** Front End Site routes //
+
+// *** Facebook auth routes //
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+// *** Facebook auth routes //
