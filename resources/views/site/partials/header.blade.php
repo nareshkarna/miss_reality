@@ -56,7 +56,7 @@
 							<span class="icon-bar"></span>
 						 </button>
 						  <!-- logo -->
-					     <a class="navbar-brand " href="#"> <img src="image/logo.png" alt="logo"   class="img-responsive logo " /> </a>
+					     <a class="navbar-brand " href="#"> <img src="<?php echo URL::to('dist/image/logo.png');?>" alt="logo" class="img-responsive logo " /> </a>
 					</div>
 					<!-- navbar-collapse -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

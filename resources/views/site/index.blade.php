@@ -5,7 +5,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12 slider">
-				<image src="image/55.jpg" alt="logo"   class="img-responsive" style="width:100%;" />
+				<image src="<?php echo URL::to('dist/image/55.jpg');?>" alt="banner"   class="img-responsive" style="width:100%;" />
 			</div>
 		</div>
 	</div>
@@ -13,7 +13,7 @@
 	<!-- slider form start-->
 	<div class="container">
 		<div class="heading find">
-			<h2>Find Your Dream land</h2>
+			<h2>Find Your Dream Land</h2>
 		</div>
 		<div class="row">
 			<div class=" col-sm-8 col-xs-12 col-md-offset-2">
@@ -68,7 +68,7 @@
 						<div class="service-box">
 							<div class="row">
 								<div class="col-md-6 col-sm-6 col-xs-12  ">
-									<img src="image/listing 1.jpg" alt="logo" class="img-responsive">
+									<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive">
 								</div>
 								<div class="col-md-6 col-sm-6 col-xs-12  ">
 									<!--  buyer text-->
@@ -88,7 +88,7 @@
 						<div class="service-box">
 							<div class="row">
 									<div class="col-md-6 col-sm-6 col-xs-12  ">
-										<img src="image/listing 2.jpg" alt="logo" class="img-responsive"/>
+										<img src="<?php echo URL::to('dist/image/listing 2.jpg');?>" alt="logo" class="img-responsive"/>
 									</div>
 									<!--  buyer text-->
 									<div class="col-md-6 col-sm-6 col-xs-12  ">
@@ -112,7 +112,7 @@
 						<div class="service-box">
 							<div class="row">
 								<div class="col-md-6 col-sm-6 col-xs-12  ">
-									<img src="image/listing 2.jpg" alt="logo" class="img-responsive"/>
+									<img src="<?php echo URL::to('dist/image/listing 2.jpg');?>" alt="logo" class="img-responsive"/>
 								</div>
 								<!--  buyer text-->
 								<div class="col-md-6 col-sm-6 col-xs-12  ">
@@ -132,7 +132,7 @@
 						<div class="service-box">
 							<div class="row">	
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<img src="image/listing 1.jpg" alt="logo" class="img-responsive"/>
+									<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive"/>
 								</div>
 								<!--  buyer text-->
 								<div class="col-md-6 col-sm-6 col-xs-12  ">
@@ -203,7 +203,7 @@
 								</div><!-- /.col-md-6 -->
 								<div class="col-sm-6">
 									<div class="image-content">
-										<img src="image/about-image.png" alt="about">
+										<img src="<?php echo URL::to('dist/image/about-image.png');?>" alt="about">
 									</div><!-- / text-content -->
 								</div><!-- / col-md-6 -->
 							</div><!-- / row -->
@@ -225,7 +225,7 @@
 								</div><!-- / col-md-6 -->
 								<div class="col-sm-6">
 									<div class="image-content">
-										<img src="image/about-image.png" alt="about">
+										<img src="<?php echo URL::to('dist/image/about-image.png');?>" alt="about">
 									</div><!-- / text-content -->
 								</div><!-- / col-md-6 -->
 							</div><!-- / row -->
@@ -247,7 +247,7 @@
 								</div><!-- / col-md-6 -->
 								<div class="col-sm-6">
 								  <div class="image-content">
-									  <img src="image/property_grid-1.png" alt="about">
+									  <img src="<?php echo URL::to('dist/image/property_grid-1.png');?>" alt="about">
 								  </div><!-- / text-content -->
 								</div><!-- / col-md-6 -->
 							</div><!-- / row -->
@@ -273,7 +273,7 @@
 					<div class="col-md-4 col-sm-4 col-xs-12">
 						<!-- listing- box first-->
 						<div class="thumbnail listing-thumbnail">
-							<img src="image/listing 1.jpg" alt="logo" class="img-responsive"/>
+							<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive"/>
 								<div class="caption">
 									<p class="listing-text1" >Real House<p>
 									<p><i class="fa fa-map-marker map" aria-hidden="true"></i> &nbsp; Chandigarh</p>
@@ -298,7 +298,7 @@
 					<div class="col-md-4 col-sm-4 col-xs-12">
 						<!-- listing- box second-->
 						<div class="thumbnail listing-thumbnail">
-							<img src="image/listing 1.jpg" alt="logo" class="img-responsive"/>
+							<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive"/>
 								<div class="caption">
 									<p class="listing-text1" >Real House<p>
 									<p><i class="fa fa-map-marker map" aria-hidden="true"></i> &nbsp; Chandigarh</p>
@@ -323,7 +323,7 @@
 					<div class="col-md-4 col-sm-4 col-xs-12">
 						<!-- listing- box third-->
 						<div class="thumbnail listing-thumbnail">
-							<img src="image/listing 1.jpg" alt="logo" class="img-responsive"/>
+							<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive"/>
 								<div class="caption">
 									<p class="listing-text1" >Real House<p>
 									<p><i class="fa fa-map-marker map" aria-hidden="true"></i> &nbsp; Chandigarh</p>
@@ -352,7 +352,7 @@
 					<div class="col-md-4 col-sm-4 col-xs-12">
 						<!-- listing- box fourth-->
 						<div class="thumbnail listing-thumbnail">
-							<img src="image/listing 1.jpg" alt="logo" class="img-responsive"/>
+							<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive"/>
 							<div class="caption">
 								<p class="listing-text1" >Real House<p>
 								<p><i class="fa fa-map-marker map" aria-hidden="true"></i> &nbsp; Chandigarh</p>
@@ -377,7 +377,7 @@
 					<div class="col-md-4 col-sm-4 col-xs-12">
 						<!-- listing- box fifth-->
 						<div class="thumbnail listing-thumbnail">
-							<img src="image/listing 1.jpg" alt="logo" class="img-responsive"/>
+							<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive"/>
 								<div class="caption">
 									<p class="listing-text1" >Real House<p>
 									<p><i class="fa fa-map-marker map" aria-hidden="true"></i> &nbsp; Chandigarh</p>
@@ -402,7 +402,7 @@
 					<div class="col-md-4 col-sm-4 col-xs-12">
 						<!-- listing- box sixth-->
 						<div class="thumbnail listing-thumbnail">
-							<img src="image/listing 1.jpg" alt="logo" class="img-responsive"/>
+							<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive"/>
 								<div class="caption">
 									<p class="listing-text1" >Real House<p>
 									<p><i class="fa fa-map-marker map" aria-hidden="true"></i> &nbsp; Chandigarh</p>
