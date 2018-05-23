@@ -32,8 +32,8 @@
 					</div>
 					<div class="col-md-8  col-sm-8 col-xs-12">
 					<ul class="top-icon">
-							<li class="top-icon-li"><a  href=""> <i class=" glyphicon glyphicon-off"></i>&nbsp;LOG IN </li></a>
-							<li class="top-icon-li"> <a  href=""><i class="fa fa-sign-in" aria-hidden="true"></i> &nbsp; REGISTER</li></a>
+							<li class="top-icon-li"><a  href="{{ route('login') }}"> <i class=" glyphicon glyphicon-off"></i>&nbsp;LOG IN </li></a>
+							<li class="top-icon-li"> <a  href="{{ route('register') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> &nbsp; REGISTER</li></a>
 					</ul>
 					</div>
 				</div>
