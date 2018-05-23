@@ -30,3 +30,8 @@ Route::get('/', 'SiteController@index');
 
 
 // *** Front End Site routes //
+
+// *** Facebook auth routes //
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+// *** Facebook auth routes //
