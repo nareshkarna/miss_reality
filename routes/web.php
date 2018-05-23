@@ -24,7 +24,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/services', 'ServiceController@services')->name('services');
 Route::get('/admin/create_service', 'ServiceController@add_service')->name('services');
 Route::post('/admin/save_service', 'ServiceController@saveService');
-
+Route::get('/admin/service/{id}','ServiceController@editService');
+Route::post('/admin/service/{id}','ServiceController@updateService');
 
 // *** Front End Site routes //
 

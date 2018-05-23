@@ -44,6 +44,20 @@ class ServiceController extends Controller
         $id =$service->saveServices($request->all());
         return redirect('/admin/services')->with('success', 'Services has been added successfully.');
    
-    } 
+    }
+	public function editService($id)
+    {
+        $service = Services::where('id', $id)->first();
+        return view('admin.edit_service', compact('service', 'id'));
+    }
+	public function updateService(Request $request, $id)
+    {
+        $service = new Services();
+        $data = $this->validate($request, [
+            'description'=>'required',
+            'title'=> 'required',
+			'cost'=> 'nullable|numeric'
+        ]);
+    }
     
 }

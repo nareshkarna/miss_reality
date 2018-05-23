@@ -46,7 +46,7 @@
 							<td>{{$ser->name}}</td>
 							<td>{{$ser->description}}</td>
 							<td>{{$ser->cost}}</td>
-							<td><a href="{{action('ServiceController@edit',$ticket->id)}}" class="btn btn-primary">Edit</a></td>
+							<td><a href="{{action('ServiceController@editService',$ser->id)}}" class="btn btn-primary">Edit</a></td>
 							<td> <a href="#" class="btn btn-danger">DELETE</a></td>
 						</tr>
 					@endforeach	
