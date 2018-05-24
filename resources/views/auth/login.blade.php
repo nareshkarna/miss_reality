@@ -64,6 +64,11 @@
                 </div>
             </div>
         </div>
+        <!-- Login via facebook HTML code  -->
+
+        <a href="/login/facebook"  class="btn btn-default btn-md">Log in with Facebook</a>
+
+        <!-- Login via facebook HTML code  -->
     </div>
 </div>
 @endsection
