@@ -58,6 +58,25 @@ class ServiceController extends Controller
             'title'=> 'required',
 			'cost'=> 'nullable|numeric'
         ]);
+		$service->updateServices($request->all(),$id);
+        return redirect('/admin/services')->with('success', 'Service has been updated successfully.');
     }
+	public function deleteService($id)
+    {
+        $service = Services::find($id);
+        $service->delete();
+
+        return redirect('/admin/services')->with('success', 'Service has been deleted!!');
+    }
+	public function subServices($id){
+		$this->data['title'] ='Services'; // set the page title
+
+        return view('admin.sub_services', $this->data)->with(compact('id'));
+	}
+	public function addSubService($id){
+		$this->data['title'] ='Services'; // set the page title
+
+        return view('admin.create_service', $this->data)->with(compact('id'));
+	}
     
 }

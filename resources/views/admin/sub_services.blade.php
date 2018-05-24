@@ -3,7 +3,7 @@
 @section('header')
     <section class="content-header">
       <h1>
-         Services
+         Sub Services
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{ backpack_url() }}">{{ config('backpack.base.project_name') }}</a></li>
@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-sm-12">
             
-				<a href="{{url('/admin/create_service')}}" class="btn btn-primary">Create Service</a>
+				<a href="{{action('ServiceController@addSubService',$id)}}" class="btn btn-primary">Create Sub Service</a>
 			
         </div>
     </div>
@@ -36,7 +36,7 @@
 						  <th>Title</th>
 						  <th>Description</th>
 						   <th>cost</th>
-						  <th colspan="3">Action</th>
+						  <th colspan="2">Action</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -46,7 +46,6 @@
 							<td>{{$ser->name}}</td>
 							<td>{{$ser->description}}</td>
 							<td>{{$ser->cost}}</td>
-							<td><a href="{{action('ServiceController@subServices',$ser->id)}}" class="btn btn-info">add Sub-Service</a></td>
 							<td><a href="{{action('ServiceController@editService',$ser->id)}}" class="btn btn-primary">Edit</a></td>
 							<td> <a href="{{action('ServiceController@deleteService',$ser->id)}}" class="btn btn-danger">DELETE</a></td>
 						</tr>
