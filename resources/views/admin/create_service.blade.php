@@ -3,7 +3,11 @@
 @section('header')
     <section class="content-header">
       <h1>
+		@if(isset($id))
+		  Create Sub Service
+		@else
          Create Service
+		@endif
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{ backpack_url() }}">{{ config('backpack.base.project_name') }}</a></li>
@@ -41,7 +45,12 @@
 				<label for="cost">Cost:</label>
 				<input type="text" class="form-control" name="cost"/>
 			</div>
-			<input type ="hidden" name="parent" value="0" / >
+			@if(isset($id))
+			 <input type ="hidden" name="parent" value="{{$id}}" / >
+			@else
+			 <input type ="hidden" name="parent" value="0" / >
+			@endif
+			
 			<input type ="hidden" name="user" value="{{ Auth::user()->id }}" / >
 			<button type="submit" class="btn btn-primary">Create</button>
 			</form>

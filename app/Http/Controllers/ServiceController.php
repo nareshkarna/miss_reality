@@ -21,7 +21,7 @@ class ServiceController extends Controller
     {
         $this->data['title'] = 'Services'; // set the page title
 
-		$services = Services::all();
+		$services = Services::where('parent',0)->get();
 
         return view('admin.services',  $this->data)->with(compact('services'));
     }
@@ -58,6 +58,27 @@ class ServiceController extends Controller
             'title'=> 'required',
 			'cost'=> 'nullable|numeric'
         ]);
+		$service->updateServices($request->all(),$id);
+        return redirect('/admin/services')->with('success', 'Service has been updated successfully.');
     }
+	public function deleteService($id)
+    {
+        $service = Services::find($id);
+        $service->delete();
+
+        return redirect('/admin/services')->with('success', 'Service has been deleted!!');
+    }
+	public function subServices($id){
+		$this->data['title'] ='Services'; // set the page title
+
+		$services = Services::where('parent', $id)->get();
+
+        return view('admin.sub_services', $this->data)->with(compact('services','id'));
+	}
+	public function addSubService($id){
+		$this->data['title'] ='Services'; // set the page title
+
+        return view('admin.create_service', $this->data)->with(compact('id'));
+	}
     
 }

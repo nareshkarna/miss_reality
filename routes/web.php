@@ -26,6 +26,9 @@ Route::get('/admin/create_service', 'ServiceController@add_service')->name('serv
 Route::post('/admin/save_service', 'ServiceController@saveService');
 Route::get('/admin/service/{id}','ServiceController@editService');
 Route::post('/admin/service/{id}','ServiceController@updateService');
+Route::get('/delete/service/{id}','ServiceController@deleteService');
+Route::get('/admin/subServices/{id}', 'ServiceController@subServices')->name('services');
+Route::get('/admin/create_service/{id}', 'ServiceController@addSubService')->name('services');
 
 // *** Front End Site routes //
 
@@ -35,6 +38,6 @@ Route::get('/', 'SiteController@index');
 // *** Front End Site routes //
 
 // *** Facebook auth routes //
-Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
-Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('login/{provider}', 'Auth\SocialAccountController@redirectToProvider');
+Route::get('login/{provider}/callback', 'Auth\SocialAccountController@handleProviderCallback');
 // *** Facebook auth routes //

@@ -16,5 +16,10 @@ class Services extends Model
 		);
 		return $id;
 	}
+	public function updateServices($data,$id){
+		DB::table('services')
+            ->where('id', $id)
+            ->update(['name'=>$data['title'], 'parent'=>$data['parent'],'description'=>$data['description'],'cost'=>$data['cost']]);
+	}
 }
 ?>
