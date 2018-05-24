@@ -46,14 +46,15 @@
 							<td>{{$ser->name}}</td>
 							<td>{{$ser->description}}</td>
 							<td>{{$ser->cost}}</td>
-							<td><a href="{{action('ServiceController@editService',$ser->id)}}" class="btn btn-primary">Edit</a></td>
-							<td> <a href="{{action('ServiceController@deleteService',$ser->id)}}" class="btn btn-danger">DELETE</a></td>
+							<td><!-- <a href="{{action('ServiceController@editService',$ser->id)}}" class="btn btn-primary">Edit</a> --></td>
+							<td> <!-- <a href="{{action('ServiceController@deleteService',$ser->id)}}" class="btn btn-danger">DELETE</a> --></td>
 						</tr>
 					@endforeach	
 					</tbody>
 				</table>
 			
 			@endif
+
 		</div>
 	</div>
 </div >

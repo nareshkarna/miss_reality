@@ -21,7 +21,7 @@ class ServiceController extends Controller
     {
         $this->data['title'] = 'Services'; // set the page title
 
-		$services = Services::all();
+		$services = Services::where('parent',0)->get();
 
         return view('admin.services',  $this->data)->with(compact('services'));
     }
@@ -71,7 +71,9 @@ class ServiceController extends Controller
 	public function subServices($id){
 		$this->data['title'] ='Services'; // set the page title
 
-        return view('admin.sub_services', $this->data)->with(compact('id'));
+		$services = Services::where('parent', $id)->get();
+
+        return view('admin.sub_services', $this->data)->with(compact('services','id'));
 	}
 	public function addSubService($id){
 		$this->data['title'] ='Services'; // set the page title
