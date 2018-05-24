@@ -30,12 +30,11 @@ Route::get('/delete/service/{id}','ServiceController@deleteService');
 Route::get('/admin/subServices/{id}', 'ServiceController@subServices')->name('services');
 Route::get('/admin/create_service/{id}', 'ServiceController@addSubService')->name('services');
 
-// *** Front End Site routes //
 
+// *** Front End Site routes //
 Route::get('/', 'SiteController@index');
-
-
 // *** Front End Site routes //
+
 
 // *** Facebook auth routes //
 Route::get('login/{provider}', 'Auth\SocialAccountController@redirectToProvider');
