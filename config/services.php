@@ -36,9 +36,11 @@ return [
     ],
 
 	'facebook' => [
-		'client_id' => '604812826549909',         // Your facebook Client ID
-		'client_secret' => '100e6d476ae56aba7210f5b8c4f0bf99', // Your facebook Client Secret
-		'redirect' => '/login/facebook/callback',
+        //'client_id' => '604812826549909',         // Your facebook Client ID
+	    'client_id' => '174633053248962',         // Your facebook Client ID
+       // 'client_secret' => '1c74582938742203078ba0d5a241c227', // Your facebook Client Secret
+		'client_secret' => '24398643254186fc8b820d39d18e94a2', // Your facebook Client Secret
+		'redirect' => 'http://localhost:8000/callback',
 	],
 
 ];

@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'user_type','block_status',
+        'name', 'email', 'password', 'user_type','block_status','social_provider',
     ];
 
     /**
@@ -27,9 +27,4 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /* relationship for  Social(facebook) login*/
-    public function accounts(){
-        return $this->hasMany('App\LinkedSocialAccount');
-    }
-    /* /relationship for  Social(facebook) login*/
 }

@@ -37,6 +37,9 @@ Route::get('/', 'SiteController@index');
 
 
 // *** Facebook auth routes //
-Route::get('login/{provider}', 'Auth\SocialAccountController@redirectToProvider');
+/*Route::get('login/{provider}', 'Auth\SocialAccountController@redirectToProvider');
 Route::get('login/{provider}/callback', 'Auth\SocialAccountController@handleProviderCallback');
+*/
+Route::get('/redirect', 'SocialAuthFacebookController@redirect');
+Route::get('/callback', 'SocialAuthFacebookController@callback');
 // *** Facebook auth routes //
