@@ -15,9 +15,9 @@
 
 @section('content')
 <div class="body">
-	@if(\Session::has('success'))
+	@if(isset($success))
         <div class="alert alert-success">
-            {{\Session::get('success')}}
+            {{$success}}
         </div>
     @endif
     <div class="row">
@@ -46,8 +46,8 @@
 							<td>{{$ser->name}}</td>
 							<td>{{$ser->description}}</td>
 							<td>{{$ser->cost}}</td>
-							<td><!-- <a href="{{action('ServiceController@editService',$ser->id)}}" class="btn btn-primary">Edit</a> --></td>
-							<td> <!-- <a href="{{action('ServiceController@deleteService',$ser->id)}}" class="btn btn-danger">DELETE</a> --></td>
+							<td><a href="{{action('ServiceController@editService',$ser->id)}}" class="btn btn-primary">Edit</a> </td>
+							<td> <a href="{{action('ServiceController@deleteService',$ser->id)}}" class="btn btn-danger">DELETE</a> </td>
 						</tr>
 					@endforeach	
 					</tbody>

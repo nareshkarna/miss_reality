@@ -58,8 +58,16 @@ class ServiceController extends Controller
             'title'=> 'required',
 			'cost'=> 'nullable|numeric'
         ]);
+		$parent=$request->input('parent');
+		
 		$service->updateServices($request->all(),$id);
-        return redirect('/admin/services')->with('success', 'Service has been updated successfully.');
+		if($parent>0){
+			$success = 'Service has been updated successfully.';
+			$services = Services::where('parent', $parent)->get();
+			return view('admin.sub_services',['id'=> $parent,'services'=>$services,'success'=>$success]);
+		} else {
+			return redirect('/admin/services')->with('success', 'Service has been updated successfully.');
+		}
     }
 	public function deleteService($id)
     {

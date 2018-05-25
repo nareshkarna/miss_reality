@@ -20,18 +20,14 @@
 
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
-   
 
 </head>
 <body >
 	
 
-      <header class="main-header">
-        
-      </header>
-
+     
       <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
+      <div class="content-body">
         <!-- Content Header (Page header) --
 
         <!-- Main content -->
@@ -43,7 +39,6 @@
         <!-- /.content -->
       </div>
       
-    </div>
     <!-- ./wrapper -->
 
     <!-- jQuery 2.2.3 -->
