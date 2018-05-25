@@ -33,6 +33,7 @@ Route::get('/admin/create_service/{id}', 'ServiceController@addSubService')->nam
 
 // *** Front End Site routes //
 Route::get('/', 'SiteController@index');
+Route::get('/mytransactions','UserController@mytransactions');
 // *** Front End Site routes //
 
 

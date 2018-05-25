@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use DB;
 
 class User extends Authenticatable
 {
@@ -27,4 +28,15 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+	function scopemytransactions_site(){
+		/* $whereData = [
+			['j.status', '<>', '0']
+		]; */
+		$returndata = DB::table('transactions as t')->select('t.*')->orderBy('t.id','desc')->get();
+		if($returndata){
+				return $returndata;
+		} else {
+				return false;
+		}
+	}
 }
