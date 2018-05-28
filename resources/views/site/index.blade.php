@@ -1,174 +1,127 @@
 @include('site.partials.header')
 
 
-<!-- slider -->
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12 slider">
-				<image src="<?php echo URL::to('dist/image/55.jpg');?>" alt="banner"   class="img-responsive" style="width:100%;" />
+	<!-- slider -->
+	<div class="skdslider">
+		<ul id="home-slider" class="slides">
+			<li>
+				<img src="<?php echo URL::to('dist/images/1.jpg');?>" />				
+			</li>
+			<li>
+				<img src="<?php echo URL::to('dist/images/img-1.jpg');?>" />
+			</li>
+		</ul>
+		<div class="content-main-slider">
+			<div class="content-inner-slider">
+				<h1>Find Your Property</h1>
+				<div class="search-area-slide">
+					<div class="row justify-content-between">
+						<div class="col-8">
+							<input type="email" class="form-control" placeholder="Where do you want to live?" spellcheck="false">
+						</div>
+						<div class="col-4">
+							<button type="button" class="btn btn-primary btn-lg btn-block">Find Now</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<!-- / slider -->
-	<!-- slider form start-->
-	<div class="container">
-		<div class="heading find">
-			<h2>Find Your Dream Land</h2>
-		</div>
-		<div class="row">
-			<div class=" col-sm-8 col-xs-12 col-md-offset-2">
-				<form action="">
-					 <!--  form main-->
-					<div class="form-area-main">
-						<!--  form button start-->
-						<div class="btn-outer">
-							<div class="btn-outer">
-								 <button type="button" class="btn formbtn">
-									<i class="fa fa-search" aria-hidden="true"></i>
-								</button>
-							</div>
-						</div>
-						<!-- / form button -->
-						<div class="input-area">
-							<!--  form input start-->
-							<div class="text-input">
-								<input class="form-control" type="text" Placeholder="enter Keyword" >
-							</div>
-							<!-- / form input -->
-							<!-- form select -->
-							<div class="select-area">
-								<select class="form-control" placeholder="Category">
-									<option>Category</option>
-								</select>
-							</div>
-							<!--  / form select -->
-						</div>
-					</div>
-				  <!--  / form main-->
-				</form>  
-			</div>			
-		</div>	
-	</div>
-	<!-- / slider form end-->
-	<!-- our Service -->
-	<section>
-	     <!--  bg-service -->
-		<div class=" bg-service">
-			<!--  container and service box -->
-			<div class="container">
-				<!-- our Service heading -->
-				<div class="heading">
-					<h2>Our Service</h2>
-				</div>
-				<!--  / our service heading -->
-				<!--  row first  -->
-				<div class="row">
-					<div class="col-md-6 col-sm-6 col-xs-12  ">
-						<!--  service box one-->
-						<div class="service-box">
-							<div class="row">
-								<div class="col-md-6 col-sm-6 col-xs-12  ">
-									<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive">
-								</div>
-								<div class="col-md-6 col-sm-6 col-xs-12  ">
-									<!--  buyer text-->
-									<h4 class="service-title service-text ">Buyer</h4>
-									<p class="service-text"> It is a long established fact that a reader will be
-										distracted by the readable content of a page when looking at its layout. 
-										It is a long established fact that a reader will 
-									 </p>
-								</div>
-								<!--  / buyer text-->
-							</div>
-							<!-- / service box one -->
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12  ">
-						<!-- service box second-->
-						<div class="service-box">
-							<div class="row">
-									<div class="col-md-6 col-sm-6 col-xs-12  ">
-										<img src="<?php echo URL::to('dist/image/listing 2.jpg');?>" alt="logo" class="img-responsive"/>
-									</div>
-									<!--  buyer text-->
-									<div class="col-md-6 col-sm-6 col-xs-12  ">
-										<h4 class="service-title service-text" >Virtual Staging</h4>
-										<p class="service-text">It is a long established fact that a reader will be
-										distracted by the readable content of a page when looking at its layout. 
-										It is a long established fact that a reader will 
-										 </p>
-									</div>
-									<!-- / buyer text-->
-							</div>
-						</div>
-						<!-- / service box second-->
-					</div>
-				</div>
-				<!--  / row first -->
-				<!--  row second -->
-				<div class="row">
-					<div class="col-md-6 col-sm-6 col-xs-12  ">
-						<!--  service box third-->
-						<div class="service-box">
-							<div class="row">
-								<div class="col-md-6 col-sm-6 col-xs-12  ">
-									<img src="<?php echo URL::to('dist/image/listing 2.jpg');?>" alt="logo" class="img-responsive"/>
-								</div>
-								<!--  buyer text-->
-								<div class="col-md-6 col-sm-6 col-xs-12  ">
-									<h4 class="service-title service-text">Seller</h4>
-									<p class="service-text">It is a long established fact that a reader will be
-									distracted by the readable content of a page when looking at its layout. 
-									It is a long established fact that a reader will 
-									 </p>
-								</div>
-								<!-- / buyer text-->
-							</div>
-						</div>
-						<!-- / service box third -->
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12  ">
-						<!-- service box fourth -->
-						<div class="service-box">
-							<div class="row">	
-								<div class="col-md-6 col-sm-6 col-xs-12">
-									<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive"/>
-								</div>
-								<!--  buyer text-->
-								<div class="col-md-6 col-sm-6 col-xs-12  ">
-									<h4 class="service-title service-text">Photography</h4>
-									<p class="service-text">It is a long established fact that a reader will be
-									distracted by the readable content of a page when looking at its layout. 
-									It is a long established fact that a reader will 
-									 </p>
-								</div>
-								<!-- / buyer text-->
-							</div>
-						</div>
-						<!-- / service box fourth -->
-					</div>
-				</div>
-				<!--  / row second -->
+	<!-- /slider -->
+
+	<!-- Properties For Rent -->
+
+
+	<!-- service -->
+	<section class="service-home">
+		<div class="container">
+			<div class="sec-title">
+				<h1>Our Services</h1>
 			</div>
-			<!-- / container and service box -->
+
+			<!-- listing -->
+			<div class="latest-outer">
+				<div class="row">
+					<!-- service 1 -->
+					<div class="col-sm-6">
+						<div class="service-area">
+							<div class="img-service">
+								<img src="<?php echo URL::to('dist/images/property_grid-1.png');?>">
+							</div>
+							<div class="content-service">
+								<h2>Service 1</h2>
+								<div class="desc-service">
+									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /service 1 -->
+					<!-- service 1 -->
+					<div class="col-sm-6">
+						<div class="service-area">
+							<div class="img-service">
+								<img src="<?php echo URL::to('dist/images/property_grid-1.png');?>">
+							</div>
+							<div class="content-service">
+								<h2>Service 1</h2>
+								<div class="desc-service">
+									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /service 1 -->
+					<!-- service 1 -->
+					<div class="col-sm-6">
+						<div class="service-area">
+							<div class="img-service">
+								<img src="<?php echo URL::to('dist/images/property_grid-1.png');?>">
+							</div>
+							<div class="content-service">
+								<h2>Service 1</h2>
+								<div class="desc-service">
+									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /service 1 -->
+					<!-- service 1 -->
+					<div class="col-sm-6">
+						<div class="service-area">
+							<div class="img-service">
+								<img src="<?php echo URL::to('dist/images/property_grid-1.png');?>">
+							</div>
+							<div class="content-service">
+								<h2>Service 1</h2>
+								<div class="desc-service">
+									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /service 1 -->
+				</div>
+			</div>
+			<!-- /listing -->
 		</div>
-		<!--  / bg-service -->
 	</section>
-	<!-- / our Service -->
+	<!-- /service -->
+
 	<!-- About -->   
 	<section class="aboutus-area">
 		<div class="container">
 			<div class="sec-title">
-				<div class="heading">
-				<h2>About Us</h2>
-				</div>
-				<div class="border-shape"></div>
+				<h1>About Us</h1>
+				<!-- <div class="border-shape"></div>
+				<p>Welcome to our House Rent Company</p> -->
 			</div>
 			<div class="row">
 				<div class="col-sm-2">
 					<div class="tab-list">
 						<ul class="nav nav-tabs about-tab hidden-xs hidden-sm" role="tablist">
-							<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">About Company</a>
+							<li role="presentation"><a class="active" href="#home" aria-controls="home" role="tab" data-toggle="tab">About Company</a>
 							</li>
 							<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Terms &amp; Condition</a>
 							</li>
@@ -182,8 +135,9 @@
 								<option value="2">Our specialty</option>
 							</select>
 						</form>
-					</div> <!-- / tab-list -->
-				</div> <!-- / col-md-2 -->
+					</div> <!-- /.tab-list -->
+				</div> <!-- /.col-md-2 -->
+
 				<div class="col-sm-10">
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane active" id="home">
@@ -199,15 +153,16 @@
 											 <li>Amorem ipsum dolor sit amet, consectetur </li>
 											 <li>Cras etitikis mauris egeth lorem ultricies</li>
 										</ul>
-									</div><!-- / text-content -->    
+									</div><!-- /.text-content -->    
 								</div><!-- /.col-md-6 -->
 								<div class="col-sm-6">
 									<div class="image-content">
-										<img src="<?php echo URL::to('dist/image/about-image.png');?>" alt="about">
-									</div><!-- / text-content -->
-								</div><!-- / col-md-6 -->
-							</div><!-- / row -->
-						</div> <!-- / home -->
+										<img src="<?php echo URL::to('dist/images/about-image.png');?>" alt="about">
+									</div><!-- /.text-content -->
+								</div><!-- /.col-md-6 -->
+							</div><!-- /.row -->
+						</div> <!-- /.home -->
+						  
 						<div role="tabpanel" class="tab-pane fade" id="profile">
 							<div class="row">
 								<div class="col-sm-6">
@@ -221,15 +176,16 @@
 											<li>Amorem ipsum dolor sit amet, consectetur </li>
 											<li>Cras etitikis mauris egeth lorem ultricies</li>
 										</ul>
-									</div><!-- / text-content -->    
-								</div><!-- / col-md-6 -->
+									</div><!-- /.text-content -->    
+								</div><!-- /.col-md-6 -->
 								<div class="col-sm-6">
 									<div class="image-content">
-										<img src="<?php echo URL::to('dist/image/about-image.png');?>" alt="about">
-									</div><!-- / text-content -->
-								</div><!-- / col-md-6 -->
-							</div><!-- / row -->
-						</div> <!-- / profile -->
+										<img src="<?php echo URL::to('dist/images/about-image.png');?>" alt="about">
+									</div><!-- /.text-content -->
+								</div><!-- /.col-md-6 -->
+							</div><!-- /.row -->
+						</div> <!-- /.profile -->
+						
 						<div role="tabpanel" class="tab-pane fade" id="messages">
 							<div class="row">
 								<div class="col-sm-6">
@@ -243,267 +199,332 @@
 											<li>Amorem ipsum dolor sit amet, consectetur </li>
 											<li>Cras etitikis mauris egeth lorem ultricies</li>
 										</ul>
-									</div><!-- / text-content -->    
-								</div><!-- / col-md-6 -->
+									</div><!-- /.text-content -->    
+								</div><!-- /.col-md-6 -->
 								<div class="col-sm-6">
 								  <div class="image-content">
-									  <img src="<?php echo URL::to('dist/image/property_grid-1.png');?>" alt="about">
-								  </div><!-- / text-content -->
-								</div><!-- / col-md-6 -->
-							</div><!-- / row -->
+									  <img src="<?php echo URL::to('dist/images/property_grid-1.png');?>" alt="about">
+								  </div><!-- /.text-content -->
+								</div><!-- /.col-md-6 -->
+							</div><!-- /.row -->
 						 </div> <!-- /.messages -->
-					</div> <!-- / tab-content -->
-				 </div><!-- / col-md-10 -->
-			</div><!-- / row -->
+					</div> <!-- /.tab-content -->
+				 </div><!-- /.col-md-10 -->
+			</div><!-- /.row -->
 		</div>
 	</section>
-	<!-- About -->   
-	<!--  listing -->
-	<section>
-	     <!-- bg-listing -->
-		<div class="bg-listing">
-				 <!-- container-->
-			<div class="container">
-				<!-- Listing heading-->
-				<div class="heading">
-					<h2>Listing</h2>
-				</div>
-				<!-- row First-->
+	<!-- About -->  
+   
+	<section class="listing-home">
+		<div class="container">
+			<div class="sec-title">
+				<h1>Listing</h1>
+			</div>
+
+			<!-- listing -->
+			<div class="latest-outer">
 				<div class="row">
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<!-- listing- box first-->
-						<div class="thumbnail listing-thumbnail">
-							<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive"/>
-								<div class="caption">
-									<p class="listing-text1" >Real House<p>
-									<p><i class="fa fa-map-marker map" aria-hidden="true"></i> &nbsp; Chandigarh</p>
-								</div>
-								<div class="row">
-									<div class="col-md-4 col-sm-4 col-xs-4 ">
-										<strong><p class="text">Area</p></strong>
-										<p class="text" >1500sqft</p>
-									</div>
-									<div class="col-md-4 col-sm-4 col-xs-4">
-										<strong><p>Rooms</p></strong>
-										<p >2</p>
-									</div>
-									<div class="col-md-4 col-sm-4 col-xs-4">
-										<strong><p>Baths</p></strong>
-										<p>1</p>
+					<!-- lastest 1 -->
+					<div class="col-sm-4">
+						<div class="card">
+							<div class="summary-thumbnail-outer-container">
+								<div class="summary-thumbnail-container">
+									<div class="sqs-image-wrapper">
+										<img src="<?php echo URL::to('dist/images/for-rent.png');?>" class="card-img-top">
 									</div>
 								</div>
-						</div>
-					</div>	
-					<!-- / listing box first-->
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<!-- listing- box second-->
-						<div class="thumbnail listing-thumbnail">
-							<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive"/>
-								<div class="caption">
-									<p class="listing-text1" >Real House<p>
-									<p><i class="fa fa-map-marker map" aria-hidden="true"></i> &nbsp; Chandigarh</p>
-								</div>
-								<div class="row">
-									<div class="col-md-4 col-sm-4 col-xs-4 ">
-										<strong><p class="text">Area</p></strong>
-										<p class="text" >1500sqft</p>
-									</div>
-									<div class="col-md-4 col-sm-4 col-xs-4">
-										<strong><p>Rooms</p></strong>
-										<p >2</p>
-									</div>
-									<div class="col-md-4 col-sm-4 col-xs-4">
-										<strong><p>Baths</p></strong>
-										<p>1</p>
+							</div>										
+							<div class="card-body">
+								<div class="room-info">
+									<div class="address-room">
+										<div class="room-title-left">
+											<h2 class="card-title"><a href="">Lovely Modern Home</a></h2>
+											<div class="location-room"><i class="fa fa-map-marker" aria-hidden="true"></i> Los Angeles, US</div>
+										</div>
+
+										<div class="quantity">
+											<ul>
+												<li><span>Area</span>1600 Sqft</li>
+												<li><span>Rooms</span>9</li>
+												<li><span>Baths</span>3</li>
+												<li><span>Garage</span>1</li>
+											</ul>
+										</div>
 									</div>
 								</div>
-						</div>
-					</div>	
-					<!-- / listing box second-->
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<!-- listing- box third-->
-						<div class="thumbnail listing-thumbnail">
-							<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive"/>
-								<div class="caption">
-									<p class="listing-text1" >Real House<p>
-									<p><i class="fa fa-map-marker map" aria-hidden="true"></i> &nbsp; Chandigarh</p>
-								</div>
-								<div class="row">
-									<div class="col-md-4 col-sm-4 col-xs-4 ">
-										<strong><p class="text">Area</p></strong>
-										<p class="text" >1500sqft</p>
-									</div>
-									<div class="col-md-4 col-sm-4 col-xs-4">
-										<strong><p>Rooms</p></strong>
-										<p >2</p>
-									</div>
-									<div class="col-md-4 col-sm-4 col-xs-4">
-										<strong><p>Baths</p></strong>
-										<p>1</p>
-									</div>
-								</div>
+								<!-- <div class="room-meta">
+									<ul>
+										<li><i class="fa fa-user"></i>Owner</li>
+										<li><i class="fa fa-calendar"></i>1 day Ago</li>
+										<li class="price">Price: 240kr.</li>
+									</ul>								
+								</div> -->
+							</div>
 						</div>
 					</div>
-					<!-- / listing box third-->
-				</div>
-				<!-- / row end-->
-				<!-- row second-->
-				<div class="row">
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<!-- listing- box fourth-->
-						<div class="thumbnail listing-thumbnail">
-							<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive"/>
-							<div class="caption">
-								<p class="listing-text1" >Real House<p>
-								<p><i class="fa fa-map-marker map" aria-hidden="true"></i> &nbsp; Chandigarh</p>
-							</div>
-							<div class="row">
-								<div class="col-md-4 col-sm-4 col-xs-4 ">
-									<strong><p class="text">Area</p></strong>
-									<p class="text" >1500sqft</p>
+					<!-- lastest 1 -->
+					<!-- lastest 1 -->
+					<div class="col-sm-4">
+						<div class="card">
+							<div class="summary-thumbnail-outer-container">
+								<div class="summary-thumbnail-container">
+									<div class="sqs-image-wrapper">
+										<img src="<?php echo URL::to('dist/images/property_grid-1.png');?>" class="card-img-top">
+									</div>
 								</div>
-								<div class="col-md-4 col-sm-4 col-xs-4">
-									<strong><p>Rooms</p></strong>
-									<p >2</p>
+							</div>										
+							<div class="card-body">
+								<div class="room-info">
+									<div class="address-room">
+										<div class="room-title-left">
+											<h2 class="card-title"><a href="">Lovely Modern Home</a></h2>
+											<div class="location-room"><i class="fa fa-map-marker" aria-hidden="true"></i> Los Angeles, US</div>
+										</div>
+
+										<div class="quantity">
+											<ul>
+												<li><span>Area</span>1600 Sqft</li>
+												<li><span>Rooms</span>9</li>
+												<li><span>Baths</span>3</li>
+												<li><span>Garage</span>1</li>
+											</ul>
+										</div>
+									</div>
 								</div>
-								<div class="col-md-4 col-sm-4 col-xs-4">
-									<strong><p>Baths</p></strong>
-									<p>1</p>
-								</div>
+								<!-- <div class="room-meta">
+									<ul>
+										<li><i class="fa fa-user"></i>Owner</li>
+										<li><i class="fa fa-calendar"></i>1 day Ago</li>
+										<li class="price">Price: 240kr.</li>
+									</ul>								
+								</div> -->
 							</div>
 						</div>
-						<!--/ listing- box fourth-->					
 					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<!-- listing- box fifth-->
-						<div class="thumbnail listing-thumbnail">
-							<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive"/>
-								<div class="caption">
-									<p class="listing-text1" >Real House<p>
-									<p><i class="fa fa-map-marker map" aria-hidden="true"></i> &nbsp; Chandigarh</p>
-								</div>
-								<div class="row">
-									<div class="col-md-4 col-sm-4 col-xs-4 ">
-										<strong><p class="text">Area</p></strong>
-										<p class="text" >1500sqft</p>
-									</div>
-									<div class="col-md-4 col-sm-4 col-xs-4">
-										<strong><p>Rooms</p></strong>
-										<p >2</p>
-									</div>
-									<div class="col-md-4 col-sm-4 col-xs-4">
-										<strong><p>Baths</p></strong>
-										<p>1</p>
+					<!-- lastest 1 -->
+					<!-- lastest 1 -->
+					<div class="col-sm-4">
+						<div class="card">
+							<div class="summary-thumbnail-outer-container">
+								<div class="summary-thumbnail-container">
+									<div class="sqs-image-wrapper">
+										<img src="<?php echo URL::to('dist/images/for-rent.png');?>" class="card-img-top">
 									</div>
 								</div>
+							</div>										
+							<div class="card-body">
+								<div class="room-info">
+									<div class="address-room">
+										<div class="room-title-left">
+											<h2 class="card-title"><a href="">Lovely Modern Home</a></h2>
+											<div class="location-room"><i class="fa fa-map-marker" aria-hidden="true"></i> Los Angeles, US</div>
+										</div>
+
+										<div class="quantity">
+											<ul>
+												<li><span>Area</span>1600 Sqft</li>
+												<li><span>Rooms</span>9</li>
+												<li><span>Baths</span>3</li>
+												<li><span>Garage</span>1</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="room-meta">
+									<ul>
+										<li><i class="fa fa-user"></i>Owner</li>
+										<li><i class="fa fa-calendar"></i>1 day Ago</li>
+										<li class="price">Price: 240kr.</li>
+									</ul>								
+								</div> -->
+							</div>
 						</div>
-						<!-- / listing- box fifth-->					
-					</div>	
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<!-- listing- box sixth-->
-						<div class="thumbnail listing-thumbnail">
-							<img src="<?php echo URL::to('dist/image/listing 1.jpg');?>" alt="logo" class="img-responsive"/>
-								<div class="caption">
-									<p class="listing-text1" >Real House<p>
-									<p><i class="fa fa-map-marker map" aria-hidden="true"></i> &nbsp; Chandigarh</p>
-								</div>
-								<div class="row">
-									<div class="col-md-4 col-sm-4 col-xs-4 ">
-										<strong><p class="text">Area</p></strong>
-										<p class="text" >1500sqft</p>
-									</div>
-									<div class="col-md-4 col-sm-4 col-xs-4">
-										<strong><p>Rooms</p></strong>
-										<p >2</p>
-									</div>
-									<div class="col-md-4 col-sm-4 col-xs-4">
-										<strong><p>Baths</p></strong>
-										<p>1</p>
+					</div>
+					<!-- lastest 1 -->
+					<!-- lastest 1 -->
+					<div class="col-sm-4">
+						<div class="card">
+							<div class="summary-thumbnail-outer-container">
+								<div class="summary-thumbnail-container">
+									<div class="sqs-image-wrapper">
+										<img src="<?php echo URL::to('dist/images/property_grid-1.png');?>" class="card-img-top">
 									</div>
 								</div>
+							</div>										
+							<div class="card-body">
+								<div class="room-info">
+									<div class="address-room">
+										<div class="room-title-left">
+											<h2 class="card-title"><a href="">Lovely Modern Home</a></h2>
+											<div class="location-room"><i class="fa fa-map-marker" aria-hidden="true"></i> Los Angeles, US</div>
+										</div>
+
+										<div class="quantity">
+											<ul>
+												<li><span>Area</span>1600 Sqft</li>
+												<li><span>Rooms</span>9</li>
+												<li><span>Baths</span>3</li>
+												<li><span>Garage</span>1</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="room-meta">
+									<ul>
+										<li><i class="fa fa-user"></i>Owner</li>
+										<li><i class="fa fa-calendar"></i>1 day Ago</li>
+										<li class="price">Price: 240kr.</li>
+									</ul>								
+								</div> -->
+							</div>
 						</div>
-						<!-- / listing- box sixth-->					
-					</div>	
+					</div>
+					<!-- lastest 1 -->
+					<!-- lastest 1 -->
+					<div class="col-sm-4">
+						<div class="card">
+							<div class="summary-thumbnail-outer-container">
+								<div class="summary-thumbnail-container">
+									<div class="sqs-image-wrapper">
+										<img src="<?php echo URL::to('dist/images/for-rent.png');?>" class="card-img-top">
+									</div>
+								</div>
+							</div>										
+							<div class="card-body">
+								<div class="room-info">
+									<div class="address-room">
+										<div class="room-title-left">
+											<h2 class="card-title"><a href="">Lovely Modern Home</a></h2>
+											<div class="location-room"><i class="fa fa-map-marker" aria-hidden="true"></i> Los Angeles, US</div>
+										</div>
+
+										<div class="quantity">
+											<ul>
+												<li><span>Area</span>1600 Sqft</li>
+												<li><span>Rooms</span>9</li>
+												<li><span>Baths</span>3</li>
+												<li><span>Garage</span>1</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="room-meta">
+									<ul>
+										<li><i class="fa fa-user"></i>Owner</li>
+										<li><i class="fa fa-calendar"></i>1 day Ago</li>
+										<li class="price">Price: 240kr.</li>
+									</ul>								
+								</div> -->
+							</div>
+						</div>
+					</div>
+					<!-- lastest 1 -->
+					<!-- lastest 1 -->
+					<div class="col-sm-4">
+						<div class="card">
+							<div class="summary-thumbnail-outer-container">
+								<div class="summary-thumbnail-container">
+									<div class="sqs-image-wrapper">
+										<img src="<?php echo URL::to('dist/images/property_grid-1.png');?>" class="card-img-top">
+									</div>
+								</div>
+							</div>										
+							<div class="card-body">
+								<div class="room-info">
+									<div class="address-room">
+										<div class="room-title-left">
+											<h2 class="card-title"><a href="">Lovely Modern Home</a></h2>
+											<div class="location-room"><i class="fa fa-map-marker" aria-hidden="true"></i> Los Angeles, US</div>
+										</div>
+
+										<div class="quantity">
+											<ul>
+												<li><span>Area</span>1600 Sqft</li>
+												<li><span>Rooms</span>9</li>
+												<li><span>Baths</span>3</li>
+												<li><span>Garage</span>1</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="room-meta">
+									<ul>
+										<li><i class="fa fa-user"></i>Owner</li>
+										<li><i class="fa fa-calendar"></i>1 day Ago</li>
+										<li class="price">Price: 240kr.</li>
+									</ul>								
+								</div> -->
+							</div>
+						</div>
+					</div>
+					<!-- lastest 1 -->
+					
 				</div>
-				<!-- / row second-->
 			</div>
-			<!--/ container-->
+			<!-- /listing -->
 		</div>
-		<!-- / bg-listing -->
-    </section>
-	<!-- / listing section-->
-	
-	<!-- contact us section -->
-	<section>
-		<!-- container -->
-		<div class="container contact-area">
-			<div class="heading">
-					<h2>Contact us</h2> 
-			</div>
-				<p class="contact-text">There are many variations of passages of Lorem Ipsum available,
-					but the majority have suffered alteration in some form, by injected humour, 
-				</p>
-			<div class="row">
-				<!-- form start-->
-				<div class="col-md-6 col-sm-6 col-xs-12 ">
-					<form action="" name="contact us">	 
-						<div class="form-group">
-							<!-- form first name -->	
-							<div class="input-group">
-								<span class="input-group-addon bg-form"><i class="glyphicon glyphicon-user"></i></span>
-								<input name="first_name" placeholder="Name" class="form-control" type="text">
-							</div>
-							<!--/ form  first name-->
-						 </div>
-						<div class="form-group">
-							<!-- form  email-->
-							<div class="input-group">
-								 <span class="input-group-addon bg-form"><i class="glyphicon glyphicon-envelope"></i></span>
-								<input name="email" placeholder="E-Mail Address" class="form-control" type="text">
-							</div>
-							<!--/  form  email-->
-						 </div>
-						<div class="form-group">
-							<!-- form  Phone-->
-							<div class="input-group">
-									<span class="input-group-addon bg-form"><i class="fa fa-phone-square" aria-hidden="true"></i></span>
-									<input name="phone" placeholder="Mobile No" class="form-control" type="text">
-							</div>
-							<!--/ form  phone-->
-						</div>
-						<div class="form-group">
-							<!-- form  comment-->								
-							<div class="input-group">
-								<span class="input-group-addon bg-form" ><i class="fa fa-comment" aria-hidden="true"></i></span>
-								<textarea class="form-control" name="comment" placeholder="comment"></textarea>
-							</div>						
-							<!-- / form  comment-->
-						 </div>
-						<div class="form-group">
-							<!-- form  submit-->
-							<div class="btn-push"><button type="submit" class="btn btn-1">SUBMIT </span></button></div>
-							<!-- / form  submit-->
-						</div>
-					</form>
-			    </div>
-				<!-- / form end-->
-				<!--contact us-->			  
-				<div class="col-md-6 col-sm-6 col-xs-12">
-					<span class="address">Address</span>
-					<p>Hall # 1041, 4th Floor, Disha Arcade<br>
-						Sector 4, MDC Panchkula,<br> 
-						Haryana 134114
-					</p><br>
-					<p><span class="address">Email:-</span>info@abc.com</p>
-					<p><span class="address">Call:-</span> 1234 567890</p>
-				</div>
-				<!--/ contact us-->
-			</div>
-		   <!-- / row second-->
-		</div>
-		<!-- / container-->
 	</section>
-	<!-- /  contact us section -->
+	<!-- /Properties For Rent -->
+
+
+	<!-- contact -->
+	<section>
+		<div class="container">
+			<div class="sec-title">
+				<h1>Contact Us</h1>
+				<!-- <div class="border-shape"></div> -->
+				<p>Thank you for your interest. For questions or comments, <br>please use the information listed here. We look forward to hearing from you soon.</p>
+			</div>
+			<div class="row justify-content-between">
+				<div class="col-12 col-sm-5 contact-form">
+					<div class="input-group">
+						<div class="input-group-addon"><i aria-hidden="true" class="fa fa-user"></i></div>
+						<input class="form-control" placeholder="Name" type="text">
+					</div>
+					<div class="input-group">
+						<div class="input-group-addon"><i aria-hidden="true" class="fa fa-envelope-o"></i></div>
+						<input class="form-control" placeholder="Email" type="text">
+					</div>
+					<div class="input-group">
+						<div class="input-group-addon"><i aria-hidden="true" class="fa fa-phone"></i></div>
+						<input class="form-control" placeholder="Phone Number" type="text">
+					</div>
+					<div class="input-group">
+						<div class="input-group-addon"><i aria-hidden="true" class="fa fa-comment"></i></div>
+						<textarea class="form-control" placeholder="Message"></textarea>
+					</div>
+					<div class="" style="margin-left:50px;">
+						<input class="btn submit-contact-home btn-lg" value="SUBMIT" type="submit"> 
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-6 info-rental">
+					<div>
+						
+						<strong>Address</strong> 
+						<p>Roebuck Road<br>
+						Walsall, West Midlands WS3 1AL<br>
+						We are near Walsall town centre.<br>
+						</p>
+					</div>
+					
+						<strong>Hours of Operation</strong>
+						<p>Monday - Sunday, 8:00 a.m. - 8:00 p.m.<br>
+						Out-Of-Hours Consultations Available On Evenings
+					</p>
+					
+					<p>
+						<strong>Email:- </strong> info@tailormaidevents.com
+					</p>
+					
+					<p>
+						<strong>Call:- </strong> 0123 456 789 
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /contact -->
 
 
 

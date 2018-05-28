@@ -1,91 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>Property</title>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+	<title>Property Manager</title>
+	<meta name="generator" content="editplus">
+	<meta name="author" content="">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	
+    <link href="{{ asset('/') }}dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ asset('/') }}dist/font-awesome-4.7.0/css/font-awesome.min.css">	
+	<link href="{{ asset('/') }}dist/css/style.css" rel="stylesheet">
+	<link href="{{ asset('/') }}dist/css/skdslider.css" rel="stylesheet">
+	<script charset="utf-8" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="{{ asset('/') }}dist/js/popper.js"></script>
+	<script charset="utf-8" src="{{ asset('/') }}dist/js/bootstrap.min.js"></script>
+	<script src="{{ asset('/') }}dist/js/skdslider.js"></script>
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+</head>
 
-		<!-- Bootstrap -->
-		<link rel="stylesheet" href="{{ asset('/') }}dist/css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="{{ asset('/') }}dist/css/style1.css"/>
-		<link rel="stylesheet" href="{{ asset('/') }}dist/Fontawesome/css/font-awesome.css"/>
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-	</head>
-<body>
+ <body>
 	<!-- header -->
-    <header>
-		<!-- bg-skyblue and icon-1-->
-		<div class=" bg-skyblue icon-1">
-			<!-- container-->
-			<div class="container ">
-				<div class="row">
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<i class="fa fa-phone-square" aria-hidden="true"></i>
-						 1234 567 890
-					</div>
-					<div class="col-md-8  col-sm-8 col-xs-12">
-						<ul class="top-icon">
-							@guest
-								<li class="top-icon-li"><a  href="{{ route('login') }}"> <i class=" glyphicon glyphicon-off"></i>&nbsp;LOG IN </li></a>
-								<li class="top-icon-li"> <a  href="{{ route('register') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> &nbsp; REGISTER</li></a>
-							@else
-								<li class="top-icon-li"><a  href="#">&nbsp;Hi {{ Auth::user()->name }}</li></a>
-									<div>
-										<li class="top-icon-li"><a  href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> <i class=" glyphicon glyphicon-off"></i>&nbsp; LOGOUT</li></a>
-										<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-			                             @csrf
-			                            </form>
-									</div>
-								</li>
-							@endguest
-									
-						</ul>
-					</div>
+	<div class="top-bar">
+		<div class="container">
+			<div class="row">
+				<div class="col text-left phNumber-top"><i class="fa fa-phone-square" aria-hidden="true"></i> 123-4567-890</div>
+				<div class="col text-right">
+				@guest
+					<a href="{{ route('login') }}">
+						<i class="fa fa-power-off" aria-hidden="true"></i>  Login
+					</a>
+					<a href="{{ route('register') }}">
+						<i class="fa fa-sign-in" aria-hidden="true"></i>  Register
+					</a>
+				@else
+				<a href="#">
+					<i class="fa fa-power-off" aria-hidden="true"></i>&nbsp;Hi {{ Auth::user()->name }}
+				</a>	
+				<div>
+					<li class="top-icon-li"><a  href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> <i class=" glyphicon glyphicon-off"></i>&nbsp; LOGOUT</li></a>
+					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+					 @csrf
+					</form>
 				</div>
+				
+				@endguest
+				</div>
+				
+				
+				<!--ul class="top-icon">
+					@guest
+						<li class="top-icon-li"><a  href="{{ route('login') }}"> <i class=" glyphicon glyphicon-off"></i>&nbsp;LOG IN </li></a>
+						<li class="top-icon-li"> <a  href="{{ route('register') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> &nbsp; REGISTER</li></a>
+					@else
+						<li class="top-icon-li"><a  href="#">&nbsp;Hi {{ Auth::user()->name }}</li></a>
+							<div>
+								<li class="top-icon-li"><a  href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> <i class=" glyphicon glyphicon-off"></i>&nbsp; LOGOUT</li></a>
+								<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+								 @csrf
+								</form>
+							</div>
+						</li>
+					@endguest
+							
+				</ul-->
+				
 			</div>
-			<!--/ container-->
 		</div>
-	     <!-- / bg-skyblue and icon-1 -->
-		 <!-- header and navbar -->
-	    <nav class="navbar navbar-default">
-		    <!-- bg-navbar start-->
-			<div class=" bg-navbar">
-			    <!-- .container start-->
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						 </button>
-						  <!-- logo -->
-					     <a class="navbar-brand " href="#"> <img src="<?php echo URL::to('dist/image/logo.png');?>" alt="logo" class="img-responsive logo " /> </a>
-					</div>
-					<!-- navbar-collapse -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#">HOME</a></li>
-							<li><a href="#">ABOUT US </a></li>
-							<li><a href="#">SERVICE </a></li>
-							<li><a href="#">PROPERTY</a></li>
-							<li><a href="#">CONTACT US</a></li>
-						</ul>
-					</div>
-					<!-- / navbar-collapse -->
-				</div>
-				<!-- / container-->
+	</div>
+	<nav class="navbar navbar-expand-md">
+		<div class="container">
+			<a class="navbar-brand" href="{{URL::to('/')}}"><img src="<?php echo URL::to('dist/images/logo.png');?>"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+				<ul class="nav ">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="search-home.html">Search homes</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="list-property.html">List a Property</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="blogs.html">Blogs</a>
+					</li>	
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Contact</a>
+					</li>
+									
+				</ul>
 			</div>
-			<!-- / bg-navbar -->
-		</nav>
-		<!--/ nav -->
-	</header>
-	<!--/ header-->
+		</div>
+	</nav>
+	<!-- /header -->
