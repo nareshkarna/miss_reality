@@ -31,10 +31,22 @@
 						 1234 567 890
 					</div>
 					<div class="col-md-8  col-sm-8 col-xs-12">
-					<ul class="top-icon">
-							<li class="top-icon-li"><a  href="{{ route('login') }}"> <i class=" glyphicon glyphicon-off"></i>&nbsp;LOG IN </li></a>
-							<li class="top-icon-li"> <a  href="{{ route('register') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> &nbsp; REGISTER</li></a>
-					</ul>
+						<ul class="top-icon">
+							@guest
+								<li class="top-icon-li"><a  href="{{ route('login') }}"> <i class=" glyphicon glyphicon-off"></i>&nbsp;LOG IN </li></a>
+								<li class="top-icon-li"> <a  href="{{ route('register') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> &nbsp; REGISTER</li></a>
+							@else
+								<li class="top-icon-li"><a  href="#">&nbsp;Hi {{ Auth::user()->name }}</li></a>
+									<div>
+										<li class="top-icon-li"><a  href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> <i class=" glyphicon glyphicon-off"></i>&nbsp; LOGOUT</li></a>
+										<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+			                             @csrf
+			                            </form>
+									</div>
+								</li>
+							@endguest
+									
+						</ul>
 					</div>
 				</div>
 			</div>

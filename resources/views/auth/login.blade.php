@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+@include('site.partials.header')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -78,4 +76,5 @@
         <!-- Login via facebook HTML code  -->
     </div>
 </div>
-@endsection
+@include('site.partials.footer')
+

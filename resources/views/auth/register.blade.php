@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+@include('site.partials.header')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -63,6 +61,7 @@
                         <!--for adding user-type(Customer,Agent) and block status-->
                         <input id="user_type" type="hidden" class="form-control" name="user_type" value="C" required>
                         <input id="block_status" type="hidden" class="form-control" name="block_status" value="0" required>
+                        <input id="social_provider" type="hidden" class="form-control" name="social_provider" value="facebook" required>
                         <!--/for adding user-type(Customer,Agent) and block status-->
 
                         <div class="form-group row mb-0">
@@ -78,4 +77,5 @@
         </div>
     </div>
 </div>
-@endsection
+@include('site.partials.footer')
+
