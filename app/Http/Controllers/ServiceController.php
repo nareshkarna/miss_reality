@@ -40,7 +40,6 @@ class ServiceController extends Controller
             'title'=> 'required',
 			'cost'=> 'nullable|numeric'
         ]);
-       
         $id =$service->saveServices($request->all());
         return redirect('/admin/services')->with('success', 'Services has been added successfully.');
    

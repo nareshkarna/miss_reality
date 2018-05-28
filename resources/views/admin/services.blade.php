@@ -33,6 +33,7 @@
 				<table class="table table-striped">
 					<thead>
 						<tr>
+						  <th> Image </th>
 						  <th>Title</th>
 						  <th>Description</th>
 						   <th>cost</th>
@@ -43,6 +44,7 @@
 						
 					@foreach($services as $ser)
 						<tr>
+							<td><image src="{{storage_path('public\services\$ser->image')}}" width="50" /> </td>
 							<td>{{$ser->name}}</td>
 							<td>{{$ser->description}}</td>
 							<td>{{$ser->cost}}</td>
