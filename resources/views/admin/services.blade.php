@@ -44,7 +44,16 @@
 						
 					@foreach($services as $ser)
 						<tr>
-							<td><image src="{{storage_path('public\services\$ser->image')}}" width="50" /> </td>
+							<td>
+								@if($ser->image !='')
+									@php
+										$url = Storage::url($ser->image);
+									@endphp
+									
+									<img src="{{$url}}" width="50" /> 
+								@else
+								@endif
+							</td>
 							<td>{{$ser->name}}</td>
 							<td>{{$ser->description}}</td>
 							<td>{{$ser->cost}}</td>

@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-sm-5 col-sm-offset-4">
             <div class="box box-default">
-                <div class="box-header with-border">
-                    <div class="box-title">{{ trans('backpack::base.login') }}</div>
+                <div class="box-header with-border text-center">
+                    <div class="box-title text-center"><img src="{{URL::to('dist/images/logo.png')}}"></div>
                 </div>
                 <div class="box-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('backpack.auth.login') }}">
