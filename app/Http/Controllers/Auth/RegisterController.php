@@ -72,8 +72,19 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'user_type' => $data['user_type'],
             'block_status' => $data['block_status'],
-            'social_provider' => $data['social_provider'],
 
         ]);
+    }
+
+     public function showRegistrationForm($user_type = null)
+    {
+        if (!$user_type){//customer registration
+            $user_type = 'C';
+        }else if($user_type == 'agent'){//service agent registration
+            $user_type = 'A';
+            //return "hii agent";
+        }
+        return view('auth.register',compact('user_type')); 
+        
     }
 }

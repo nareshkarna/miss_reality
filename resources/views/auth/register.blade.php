@@ -3,7 +3,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <!-- <div class="card-header">{{ __('Register') }}</div> -->
+               <?php if($user_type == 'A'){ ?>
+                        <div class="card-header">Join as Agent</div>
+                <?php }else if($user_type== 'C'){ ?>
+                        <div class="card-header">Register</div>
+                        <?php } ?>
+
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -59,9 +65,9 @@
                             </div>
                         </div>
                         <!--for adding user-type(Customer,Agent) and block status-->
-                        <input id="user_type" type="hidden" class="form-control" name="user_type" value="C" required>
+                        <input id="user_type" type="hidden" class="form-control" name="user_type" value={{$user_type}} required>
                         <input id="block_status" type="hidden" class="form-control" name="block_status" value="0" required>
-                        <input id="social_provider" type="hidden" class="form-control" name="social_provider" value="facebook" required>
+                        <!-- <input id="social_provider" type="hidden" class="form-control" name="social_provider" value="facebook" required> -->
                         <!--/for adding user-type(Customer,Agent) and block status-->
 
                         <div class="form-group row mb-0">

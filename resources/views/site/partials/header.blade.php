@@ -40,10 +40,10 @@
 					</a>
 				@else
 				<a href="#">
-					<i class="fa fa-power-off" aria-hidden="true"></i>&nbsp;Hi {{ Auth::user()->name }}
+					<i class="" aria-hidden="true"></i>&nbsp;Hi {{ Auth::user()->name }}
 				</a>	
 				<div>
-					<li class="top-icon-li"><a  href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> <i class=" glyphicon glyphicon-off"></i>&nbsp; LOGOUT</li></a>
+					<li class="fa fa-power-off"><a  href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> <i class=" glyphicon glyphicon-off"></i>&nbsp; LOGOUT</li></a>
 					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 					 @csrf
 					</form>

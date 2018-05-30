@@ -32,7 +32,7 @@
 								you a complete pain was prex
 								 plain to you lorem
 								 </p>
-								 <button type="join" class="btn btn-agent submit-contact-home">Join </button>
+								 <a href="/register/agent" type="join" class="btn btn-agent submit-contact-home">Join </a>
 							</div>
 						</div>
 					</div>

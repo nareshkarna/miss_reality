@@ -44,3 +44,5 @@ Route::get('login/{provider}/callback', 'Auth\SocialAccountController@handleProv
 Route::get('/redirect', 'SocialAuthFacebookController@redirect');
 Route::get('/callback', 'SocialAuthFacebookController@callback');
 // *** Facebook auth routes //
+
+Route::get('/register/{agent?}', 'Auth\RegisterController@showRegistrationForm')->name('register');
