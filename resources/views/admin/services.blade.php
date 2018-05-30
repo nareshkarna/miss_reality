@@ -44,15 +44,10 @@
 						
 					@foreach($services as $ser)
 						<tr>
-							<td>
-								@if($ser->image !='')
-									@php
-										$url = Storage::url($ser->image);
-									@endphp
+							<td>							
 									
-									<img src="{{$url}}" width="50" /> 
-								@else
-								@endif
+								<img src="{{action('ServiceController@getServiceImage',$ser->id)}}" width="50" /> 
+								
 							</td>
 							<td>{{$ser->name}}</td>
 							<td>{{$ser->description}}</td>

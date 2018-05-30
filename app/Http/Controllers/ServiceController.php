@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use File;
+use Response;
 use App\Services;
 
 class ServiceController extends Controller
@@ -86,6 +87,25 @@ class ServiceController extends Controller
 		$this->data['title'] ='Services'; // set the page title
 
         return view('admin.create_service', $this->data)->with(compact('id'));
+	}
+	public function getServiceImage($id){
+		$service = Services::find($id);
+		if($service->image !=''){
+			$path = storage_path('app/public/services/') . $service->image;
+		} else {
+			$path = storage_path('app/public/services/') . 'no-img.jpg';
+		}
+        if(!File::exists($path)){ 
+            $path = storage_path('app/public/services/') . 'no-img.jpg';
+		}
+
+        $file = File::get($path);
+        $type = File::mimeType($path);
+
+        $response = Response::make($file, 200);
+        $response->header("Content-Type", $type);
+
+        return $response;
 	}
     
 }

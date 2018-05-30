@@ -29,6 +29,7 @@ Route::post('/admin/service/{id}','ServiceController@updateService');
 Route::get('/delete/service/{id}','ServiceController@deleteService');
 Route::get('/admin/subServices/{id}', 'ServiceController@subServices')->name('services');
 Route::get('/admin/create_service/{id}', 'ServiceController@addSubService')->name('services');
+Route::get('/services/image/{service}', 'ServiceController@getServiceImage');
 
 
 // *** Front End Site routes //
